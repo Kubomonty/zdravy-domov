@@ -31,7 +31,7 @@ const TabText = styled.p`
 
 const Maintext = styled.p`
   font-size: 1.5rem;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 `
 
 const Comment = styled.p`
