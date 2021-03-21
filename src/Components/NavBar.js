@@ -26,8 +26,8 @@ const Styles = styled.div`
     font-weight: 500;
     color: #004d99;
     &:hover {
-        color: #3399ff;
-      }
+      color: #3399ff;
+    }
   }
 
   .navbar-toggler {

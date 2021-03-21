@@ -11,23 +11,22 @@ import { InfraHeaters } from './Components/Pages/InfraHeaters';
 import { FloorHeaters } from './Components/Pages/FloorHeaters';
 import { InfraLights } from './Components/Pages/InfraLights';
 import { Contacts } from './Components/Pages/Contacts';
-import { NoMatch } from './Components/Pages/NoMatch';
 
-import backgroundImg from './Assets/clear-background.jpg'
+import backgroundImg from './Assets/clear_background.jpg'
 
 const BackgroundWrapper = styled.section`
   background-image: url(${backgroundImg});
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: calc(100vh - 56px);
+  background-repeat: no-repeat;
 `
 
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
-        <BackgroundWrapper>
+      <BackgroundWrapper>
+        <React.Fragment>
           <Router>
             <NavBar />
             <Layout>
@@ -38,12 +37,12 @@ class App extends Component {
                 <Route path="/podlahove-vykurovanie" component={FloorHeaters} />
                 <Route path="/infraziarice" component={InfraLights} />
                 <Route path="/kontakty" component={Contacts} />
-                <Route component={NoMatch} />
+                <Route component={Home} />
               </Switch>
             </Layout>
           </Router>
-        </BackgroundWrapper>
-      </React.Fragment>
+        </React.Fragment>
+      </BackgroundWrapper>
     );
   }
 }
