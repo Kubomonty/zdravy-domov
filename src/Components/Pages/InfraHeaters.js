@@ -18,7 +18,10 @@ const H2 = styled.h2`
 
 const Maintext = styled.p`
   font-size: 1.5rem;
-  margin: 1rem 0;
+`
+
+const TabText = styled.p`
+  font-size: 1.2rem;
 `
 
 export const InfraHeaters = () => (
@@ -43,40 +46,40 @@ export const InfraHeaters = () => (
     <Maintext>V karbónových tyčiach je zmes karbónu a ďalších 7 prvkov. Vďaka tejto vykurovacej zmesi (japonský patent) má rohož NANO-HEAT samoregulačné vlastnosti. Vďaka týmto vlastnostiam a produkcii sálavého tepla dosiahnete v porovnaní s konvekčným kúrením úsporu nákladov 30 - 35 %. Nominálny výkon tejto NANO-HEAT rohože je 130 Watt na bežný meter. Postupným ohrievaním klesá výkon rohože až na cca 60 Watt. Vďaka efektu, pri ktorom výkon s pribúdajúcou teplotou prostredia klesá, neprichádza k zbytočnému prekúreniu. Táto skutočnosť vie priniesť ďalšiu úsporu 10 - 15 % oproti iným infra-technológiám. Na meniacu sa teplotu prostredia reaguje každá infratyč samostatne. Vďaka tomu sa minimalizuje pravdepodobnosť vzniku prehriatych miest z dôvodu zmeny umiestnenia nábytku!</Maintext>
     <H2>Technické údaje</H2>
     <Row>
-      <Col sm={6} xs={12}><Maintext>Napätie</Maintext></Col>
-      <Col sm={6} xs={12}><Maintext>230V</Maintext></Col>
+      <Col sm={6} xs={12}><TabText>Napätie</TabText></Col>
+      <Col sm={6} xs={12}><TabText>230V</TabText></Col>
     </Row>
     <Row>
-      <Col sm={6} xs={12}><Maintext>Výkon</Maintext></Col>
-      <Col sm={6} xs={12}><Maintext>130 W/bm</Maintext></Col>
+      <Col sm={6} xs={12}><TabText>Výkon</TabText></Col>
+      <Col sm={6} xs={12}><TabText>130 W/bm</TabText></Col>
     </Row>
     <Row>
-      <Col sm={6} xs={12}><Maintext>Teplotná odolnosť</Maintext></Col>
-      <Col sm={6} xs={12}><Maintext>do 90 °C</Maintext></Col>
+      <Col sm={6} xs={12}><TabText>Teplotná odolnosť</TabText></Col>
+      <Col sm={6} xs={12}><TabText>do 90 °C</TabText></Col>
     </Row>
     <Row>
-      <Col sm={6} xs={12}><Maintext>Max. pracovná teplota</Maintext></Col>
-      <Col sm={6} xs={12}><Maintext>60 °C</Maintext></Col>
+      <Col sm={6} xs={12}><TabText>Max. pracovná teplota</TabText></Col>
+      <Col sm={6} xs={12}><TabText>60 °C</TabText></Col>
     </Row>
     <Row>
-      <Col sm={6} xs={12}><Maintext>Izolácia</Maintext></Col>
-      <Col sm={6} xs={12}><Maintext>Polypropylén</Maintext></Col>
+      <Col sm={6} xs={12}><TabText>Izolácia</TabText></Col>
+      <Col sm={6} xs={12}><TabText>Polypropylén</TabText></Col>
     </Row>
     <Row>
-      <Col sm={6} xs={12}><Maintext>Trieda ochrany</Maintext></Col>
-      <Col sm={6} xs={12}><Maintext>IP68</Maintext></Col>
+      <Col sm={6} xs={12}><TabText>Trieda ochrany</TabText></Col>
+      <Col sm={6} xs={12}><TabText>IP68</TabText></Col>
     </Row>
     <Row>
-      <Col sm={6} xs={12}><Maintext>Ochranné opratrenia</Maintext></Col>
-      <Col sm={6} xs={12}><Maintext>FI - istič 30 mA</Maintext></Col>
+      <Col sm={6} xs={12}><TabText>Ochranné opratrenia</TabText></Col>
+      <Col sm={6} xs={12}><TabText>FI - istič 30 mA</TabText></Col>
     </Row>
     <Row>
-      <Col sm={6} xs={12}><Maintext>Pripojenie</Maintext></Col>
-      <Col sm={6} xs={12}><Maintext>bez pripájacieho kábla</Maintext></Col>
+      <Col sm={6} xs={12}><TabText>Pripojenie</TabText></Col>
+      <Col sm={6} xs={12}><TabText>bez pripájacieho kábla</TabText></Col>
     </Row>
     <Row>
-      <Col sm={6} xs={12}><Maintext>Max. dĺžka rohože pri 16 A istení</Maintext></Col>
-      <Col sm={6} xs={12}><Maintext>23 bm</Maintext></Col>
+      <Col sm={6} xs={12}><TabText>Max. dĺžka rohože pri 16 A istení</TabText></Col>
+      <Col sm={6} xs={12}><TabText>23 bm</TabText></Col>
     </Row>
   </div>
 )

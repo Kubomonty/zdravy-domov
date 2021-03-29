@@ -13,6 +13,7 @@ import { InfraLights } from './Components/Pages/InfraLights';
 import { Contacts } from './Components/Pages/Contacts';
 
 import backgroundImg from './Assets/clear_background.jpg'
+import 'react-image-lightbox/style.css';
 
 const BackgroundWrapper = styled.section`
   background-image: url(${backgroundImg});
@@ -22,7 +23,19 @@ const BackgroundWrapper = styled.section`
   background-repeat: no-repeat;
 `
 
-class App extends Component {
+class App extends Component {  
+  state = {
+    showRecImg: false
+  }
+
+  onOpenRecImg = () => {
+    this.setState({ showRecImg: true })
+  }
+
+  onCloseRecImg = () => {
+    this.setState({ showRecImg: false })
+  }
+
   render() {
     return (
       <BackgroundWrapper>
@@ -32,7 +45,15 @@ class App extends Component {
             <Layout>
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/rekuperacie" component={Recuperators} />
+                <Route path="/rekuperacie" render=
+                  {(props) => (
+                    <Recuperators {...props}
+                      showRecImg={this.state.showRecImg}
+                      onOpenRecImg={this.onOpenRecImg}
+                      onCloseRecImg={this.onCloseRecImg}
+                    />
+                  )} 
+                />
                 <Route path="/infravykurovanie" component={InfraHeaters} />
                 <Route path="/podlahove-vykurovanie" component={FloorHeaters} />
                 <Route path="/infraziarice" component={InfraLights} />

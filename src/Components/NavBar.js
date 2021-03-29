@@ -13,8 +13,10 @@ const Styles = styled.div`
   }
 
   .navbar-brand {
-    margin: 0;
+    margin: -4px 0 0 0;
     padding: 0 0.5rem;
+    color: #004d99;
+    font-size: 24px;
     font-weight: 320;
     &:hover {
       color: #3399ff;
