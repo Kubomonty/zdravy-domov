@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import styled from 'styled-components';
 
+import ScrollToTop from './Components/ScrollToTop';
 import { NavBar } from './Components/NavBar';
 import { Layout } from './Components/Layout';
 
@@ -41,26 +42,28 @@ class App extends Component {
       <BackgroundWrapper>
         <React.Fragment>
           <Router>
-            <NavBar />
-            <Layout>
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/rekuperacie" render=
-                  {(props) => (
-                    <Recuperators {...props}
-                      showRecImg={this.state.showRecImg}
-                      onOpenRecImg={this.onOpenRecImg}
-                      onCloseRecImg={this.onCloseRecImg}
-                    />
-                  )} 
-                />
-                <Route path="/infravykurovanie" component={InfraHeaters} />
-                <Route path="/podlahove-vykurovanie" component={FloorHeaters} />
-                <Route path="/infraziarice" component={InfraLights} />
-                <Route path="/kontakty" component={Contacts} />
-                <Route component={Home} />
-              </Switch>
-            </Layout>
+            <ScrollToTop>
+              <NavBar />
+              <Layout>
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route path="/rekuperacie" render=
+                    {(props) => (
+                      <Recuperators {...props}
+                        showRecImg={this.state.showRecImg}
+                        onOpenRecImg={this.onOpenRecImg}
+                        onCloseRecImg={this.onCloseRecImg}
+                      />
+                    )} 
+                  />
+                  <Route path="/infravykurovanie" component={InfraHeaters} />
+                  <Route path="/podlahove-vykurovanie" component={FloorHeaters} />
+                  <Route path="/infraziarice" component={InfraLights} />
+                  <Route path="/kontakty" component={Contacts} />
+                  <Route component={Home} />
+                </Switch>
+              </Layout>
+            </ScrollToTop>
           </Router>
         </React.Fragment>
       </BackgroundWrapper>

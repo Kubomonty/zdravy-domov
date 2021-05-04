@@ -29,6 +29,22 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const ButtonLink = styled(Link)`
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 360;
+  color: #ffffff;
+  transition: color 0.3s;
+  &:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  &:active {
+    color: #ffffff;
+    text-decoration: none;
+  }
+`;
+
 export const Home = () => (
   <div>
     <H1>O nás</H1>
@@ -41,6 +57,8 @@ export const Home = () => (
       , <StyledLink to="/infravykurovanie">infravykurovanie</StyledLink> alebo <StyledLink to="/infraziarice">infražiariče</StyledLink>.
       <br/>Stačí nám napísať a s radosťou nájdeme riešenie, ktoré Vás poteší.
     </Maintext>
-    <Button size="lg" href="/kontakty">Ozvite sa nám</Button>
+    <Button size="lg">
+      <ButtonLink to="/kontakty">Ozvite sa nám</ButtonLink>
+    </Button>
   </div>
 )
