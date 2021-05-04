@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
 
+import { Link } from 'react-router-dom';
+
 const H1 = styled.h1`
   color: #004d99;
   font-size: 4rem;
@@ -20,14 +22,33 @@ const H3 = styled.h3`
 const ContactGroup = styled.section`
   margin-top: 3rem;
 `
+
 const PrimaryMainText = styled.p `
-font-size: 1.5rem;
-margin: 0;
+  font-size: 1.5rem;
+  margin: 0;
 `
 
 const Maintext = styled.p`
   font-size: 1.1rem;
   margin: 0;
+`
+
+const CompanyInfoText = styled.p `
+  font-size: 1.3rem;
+  margin: 0;
+`
+
+const StyledLink = styled(Link)`
+color: inherit;
+  transition: color 0.3s;
+  &:hover {
+    color: #3399ff;
+    text-decoration: none;
+  }
+  &:active {
+    color: #3399ff;
+    text-decoration: none;
+  }
 `
 
 export const Contacts = () => (
@@ -45,6 +66,16 @@ export const Contacts = () => (
       <H3>Drábik Emil</H3>
       <Maintext>Tel.: 0944 639 463</Maintext>
       <Maintext>Email: drabik.emil@zdravy-domov.sk</Maintext>
+    </ContactGroup>
+    <ContactGroup>
+      <CompanyInfoText>DEM trade</CompanyInfoText>
+      <CompanyInfoText>Rastislavova 23</CompanyInfoText>
+      <CompanyInfoText>040 01, Košice</CompanyInfoText>
+      <CompanyInfoText>IČO: 31737412</CompanyInfoText>
+      <CompanyInfoText>DIČ: 2020985307</CompanyInfoText>
+      <CompanyInfoText>
+        <StyledLink to="/">zdravy-domov.sk</StyledLink>
+      </CompanyInfoText>
     </ContactGroup>
   </div>
 )

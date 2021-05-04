@@ -18,6 +18,7 @@ const Styles = styled.div`
     color: #004d99;
     font-size: 24px;
     font-weight: 320;
+    transition: color 0.3s;
     &:hover {
       color: #3399ff;
     }
@@ -27,6 +28,7 @@ const Styles = styled.div`
     font-size: 18px;
     font-weight: 500;
     color: #004d99;
+    transition: color 0.3s;
     &:hover {
       color: #3399ff;
     }

@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import pranaLogoImg from '../../Assets/prana_logo_ret.png';
 import smartfanLogoImg from '../../Assets/smartfan_logo.png';
 import smartfanS from '../../Assets/smartfan_s.jpg';
-import Lightbox from 'react-image-lightbox';;
+import Lightbox from 'react-image-lightbox';
 
 const H1 = styled.h1`
   color: #004d99;
@@ -16,13 +16,13 @@ const H1 = styled.h1`
 `
 
 const H2 = styled.h2`
+  margin-bottom: 1rem;
   color: #004d99;
   font-size: 3rem;
 `
 
 const H3 = styled.h3`
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  margin: 3rem 0 1rem 0;
   color: #004d99;
   font-size: 2rem;
 `
@@ -49,27 +49,18 @@ const BlockBorder = styled.section`
   background-color: #004d99;
   content: " ";
   width: 25vw;
-  margin: 50px auto;
+  margin: 75px auto;
 `
 
 const StyledRow = styled(Row)`
   padding: 0 15px;
 `
 
-const LinkNoStyle = styled(Link)`
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.2s;
-  &:hover {
-    color: #e67e22;
-  }
-  &:active {
-    color: #b05d14;
-  }
-`;
-
 const RecuperatorCompany = styled.section`
   margin: 0;
+  border-style: solid;
+  border-color: #004d99;
+  border-width: 1px;
   background-color: #ffffff;
   overflow: hidden;
   display: flex;
@@ -79,7 +70,7 @@ const RecuperatorCompanyLogo = styled.img`
   width: 100%;
   height: auto;
   transform: scale(0.85);
-  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.3s;
   &:hover {
     transform: scale(0.8);
     opacity: 1;
@@ -107,7 +98,7 @@ export class Recuperators extends Component {
         <BlockBorder />
         <Row>
           <Col>
-            <LinkNoStyle
+            <Link
               to="#"
               onClick={() => scroller.scrollTo('prana', {
                 smooth: true,
@@ -117,10 +108,10 @@ export class Recuperators extends Component {
               <RecuperatorCompany>
                 <RecuperatorCompanyLogo src={pranaLogoImg} />
               </RecuperatorCompany>
-            </LinkNoStyle>
+            </Link>
           </Col>
           <Col>
-            <LinkNoStyle
+            <Link
               to="#"
               onClick={() => scroller.scrollTo('smartfan', {
                 smooth: true,
@@ -130,7 +121,7 @@ export class Recuperators extends Component {
               <RecuperatorCompany>
                 <RecuperatorCompanyLogo src={smartfanLogoImg} />
               </RecuperatorCompany>
-            </LinkNoStyle>
+            </Link>
           </Col>
         </Row>
         <BlockBorder />
@@ -140,12 +131,6 @@ export class Recuperators extends Component {
           Tuto je par riadkov<br/>
           ktore sa venuju rekuperaciam<br/>
           od znacky prana recuperators typu Decentralizovaná rekuperácia
-        </Maintext>
-        <H3>Centrálna rekuperácia</H3>
-        <Maintext>
-          Tuto je par riadkov<br/>
-          ktore sa venuju rekuperaciam<br/>
-          od znacky prana recuperators typu Centrálna rekuperácia
         </Maintext>
         <BlockBorder />
         <H2 id='smartfan'>SmartFan® S</H2>

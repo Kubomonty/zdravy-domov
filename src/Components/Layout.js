@@ -7,7 +7,7 @@ import { Col, Row } from 'react-bootstrap';
 
 const StyledContainer = styled(Container)`
   margin-top: 56px;
-  padding: 1.5rem 4rem 1.5rem 4rem;
+  padding: 1.5rem 4rem 4rem 4rem;
   min-height: calc(100vh - 112px);
   background-color: rgba(255, 255, 255, 0.9);
 `
@@ -30,18 +30,20 @@ const FooterText = styled.p`
   color: #004d99;
 `
 
-const LinkNoStyle = styled(Link)`
+const StyledLink = styled(Link)`
   margin-top: -12px;
   text-decoration: none;
   font-size: 24px;
   font-weight: 320;
   color: #004d99;
-  transition: color 0.2s;
+  transition: color 0.3s;
   &:hover {
-    color: #e67e22;
+    color: #3399ff;
+    text-decoration: none;
   }
   &:active {
-    color: #b05d14;
+    color: #3399ff;
+    text-decoration: none;
   }
 `;
 
@@ -68,7 +70,7 @@ export const Layout = (props) => (
           </Col>
           <Col md={4}>
             <Row className="d-flex justify-content-md-end align-items-center">
-              <LinkNoStyle to="/">zdravy-domov.sk</LinkNoStyle>
+              <StyledLink to="/">zdravy-domov.sk</StyledLink>
             </Row>
           </Col>
         </FooterRow>
