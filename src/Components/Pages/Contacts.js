@@ -60,9 +60,6 @@ export const Contacts = () => (
       <PrimaryMainText>Email: perhac.peter@zdravy-domov.sk</PrimaryMainText>
     </ContactGroup>
     <ContactGroup>
-      <H3>Bačo Ľubomír</H3>
-      <Maintext>Tel.: 0918 013 523</Maintext>
-      <Maintext>Email: baco.lubomir@zdravy-domov.sk</Maintext>
       <H3>Drábik Emil</H3>
       <Maintext>Tel.: 0944 639 463</Maintext>
       <Maintext>Email: drabik.emil@zdravy-domov.sk</Maintext>

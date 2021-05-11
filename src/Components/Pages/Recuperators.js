@@ -27,6 +27,11 @@ const H3 = styled.h3`
   font-size: 2rem;
 `
 
+const H4 = styled.h4`
+  margin: 1.2rem 0 0.8rem 0;
+  font-size: 1.5rem;
+`
+
 const TabText = styled.p`
   font-size: 1.2rem;
 `
@@ -124,15 +129,104 @@ export class Recuperators extends Component {
             </Link>
           </Col>
         </Row>
+
         <BlockBorder />
+
         <H2 id='prana'>Prana recuperators</H2>
-        <H3>Decentralizovaná rekuperácia</H3>
-        <Maintext>
-          Tuto je par riadkov<br/>
-          ktore sa venuju rekuperaciam<br/>
-          od znacky prana recuperators typu Decentralizovaná rekuperácia
+        <Maintext>Výborný pomer ceny a kvality na trhu</Maintext>
+
+        <H3>Prednosti</H3>
+        <Maintext>+ stály prísun čerstvého vzduchu</Maintext>
+        <Maintext>+ regulácia vlhkosti</Maintext>
+        <Maintext>+ zdravá mikroklíma v miestnosti</Maintext>
+        <Maintext>+ zabraňuje vzniku plesní a zahmleniu okien</Maintext>
+        <Maintext>+ Spotreba energie od 4 Wh do 310 Wh (v závislosti na vybranom modeli). Vetrací systém medeného tepelného výmenníka zabezpečuje trvalo vysokú účinnosť až 96% (trieda úspory energie A +), čo zaručuje vysokú úroveň úspory energie</Maintext>
+        <Maintext>+ MEDENÝ VÝMENNÍK TEPLA - meď sa vyznačuje vynikajúcim prenosom tepla a pôsobí ako prírodné antiseptikum (má maximálne blízke vlastnosti striebru), vzniká tu prostredie zabezpečujúce dezinfekciu vzduchu (vírusy a baktérie strácajú životaschopnosť), odsávaný teplý vzduch prechádza medeným tepelným výmenníkom a prenáša teplo na čerstvý vzduch prúdiaci z vonku, pričom tu nedochádza k premiešaniu prúdov</Maintext>
+        <Maintext>+ KOMPAKTNÉ ROZMERY - priemer púzdra pracovného modulu - 150, 200, 250, 340 mm, dĺžka je voliteľná v závislosti na hrúbke obvodovej steny</Maintext>
+        <Maintext>+ JEDNODUCHÉ OVLÁDANIE - všetky modely majú diaľkové ovládanie, stmievač (reostat) a ovládanie pomocou mobilnej aplikácie pre Android a iOS</Maintext>
+        <Maintext>+ životnosť až 15 rokov</Maintext>
+
+        <H3>Kategórie</H3>
+        <Maintext>Rekuperátory Prana ponúkame v troch triedach: Basic (Standard), Premium a Premium plus</Maintext>
+        <H4>Basic (Standard)</H4>
+        <Maintext>Kategória štandard ponúka nasledovnú konfiguráciu<br/>
+          - Samostatne riadené motory<br/>
+          - Dátum a čas<br/>
+          - Časovač vypnutia<br/>
+          - Podpora Bluetooth<br/>
+          - Funkcia "Mini-vykurovanie"<br/>
+          - Zimná funkcia
         </Maintext>
+        <H4>Premium</H4>
+        <Maintext>
+          Kategória Premium obsahuje okrem všetkého čo kategória standard aj<br/>
+          - Senzor vlhkosti vzduchu<br/>
+          - Stanovenie stavu filtra<br/>
+          - Snímač atmosférickeho tlaku<br/>
+          - Režim AUTO, AUTO PLUS<br/>
+          - Teplota odvádzaného vzduchu pred rekuperáciou, °C (senzor 1)<br/>
+          - Teplota odvádzaného vzduchu pred rekuperáciou, °C (senzor 2)
+        </Maintext>
+        <H4>Premium plus</H4>
+        <Maintext>
+          Kategória Premium plus obsahuje okrem všetkého čo kategória Premium aj<br/>
+          - Čidlo oxidu uhličitého<br/>
+          - Ukazovateľ úrovne účinnosti<br/>
+          - Senzor kvality vzduchu, VOC<br/>
+          - Teplota odvádzaného vzduchu pred rekuperáciou, °C (senzor 3)<br/>
+          - Teplota odvádzaného vzduchu pred rekuperáciou, °C (senzor 4)
+        </Maintext>
+
+        <H3>Modely</H3>
+        <H4>Prana 150</H4>
+        <Maintext>Rekuperačná jednotka pre jednu miestnosť do 60 m2</Maintext>
+        <Maintext>
+          Účinnosť do 95%<br/>
+          Priemer 160 mm, montážny otvor 162 mm<br/>
+          Prítok – 105 m3/h, odtok – 97 m3/h<br/>
+          Spotreba elektriny 4 – 68 W/h, mini-ohrev 55 W/h<br/>
+          Hmotnosť 4,4 kg<br/>
+          Napájanie 220V<br/>
+        </Maintext>
+        <Maintext>
+          Prítok a odtok súčasne<br/>
+          Ovládanie pomocou diaľkového ovládača alebo mobilnej aplikácie<br/>
+          Znižuje vlhkosť a hladinu CO2<br/>
+          Horizontálna inštalácia<br/>
+          Ideálne pre rekonštrukcie ale aj novostavby<br/>
+          Tichá prevádzka – režim „Noc“<br/>
+          6 stupňov nastavenia intenzity podsvietenia displeja<br/>
+          Režim „Noc“, „Vetranie“ a ďalších 8 stupňov umožňujú plynule a pohodlne nastavenie<br/>
+          Spánkový časovač – nastavenie vypnutia v intervale od 10 minút do 9 hodín<br/>
+          Vstavaný mini-ohrev pre zvýšenie teploty privádzaného vzduchu<br/>
+          Zimný režim pre pohodlne použitie pri teplotách
+        </Maintext>
+        <Maintext>Minimálna dĺžka 455 mm</Maintext>
+        <H4>Prana 200G</H4>
+        <Maintext>Rekuperačná jednotka pre jednu miestnosť do 60 m2</Maintext>
+        <Maintext>
+          Účinnosť do 93%<br/>
+          Priemer 210 mm, montážny otvor 212 mm<br/>
+          Prítok – 135 m3/h, odtok – 125 m3/h<br/>
+          Spotreba elektriny 7 – 32 W/h, mini-ohrev 55 W/h<br/>
+          Hmotnosť 5,8 kg<br/>
+          Napájanie 220V
+        </Maintext>
+        <Maintext>Minimálna dĺžka 440 mm</Maintext>
+        <H4>Prana 200C</H4>
+        <Maintext>Rekuperačná jednotka pre jednu miestnosť do 120 m2</Maintext>
+        <Maintext>
+          Účinnosť do 93%<br/>
+          Priemer 210 mm, montážny otvor 212 mm<br/>
+          Prítok – 235 m3/h, odtok – 220 m3/h<br/>
+          Spotreba elektriny 12 – 54 W/h, mini-ohrev 55 W/h<br/>
+          Hmotnosť 6,0 kg<br/>
+          Napájanie 220V
+        </Maintext>
+        <Maintext>Minimálna dĺžka 500 mm</Maintext>
+
         <BlockBorder />
+
         <H2 id='smartfan'>SmartFan® S</H2>
         <Maintext>
           Najmenší, najtichší a najúčinnejší decentralizovaný vetrací systém obytných priestorov vo svojej triede.

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import ScrollUpButton from "react-scroll-up-button";
 
 const Styles = styled.div`
   .container {
@@ -39,23 +40,28 @@ const Styles = styled.div`
   }
 `;
 
-export const NavBar = () => (
-  <Styles>
-    <Navbar expand="xl" fixed='top'>
-      <Container>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Item><Nav.Link as={Link} to="/">Domov</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link as={Link} to="/rekuperacie">Rekuperácie</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link as={Link} to="/infravykurovanie">Infravykurovanie</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link as={Link} to="/podlahove-vykurovanie">Podlahové vykurovanie</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link as={Link} to="/infraziarice">Infražiariče</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link as={Link} to="/kontakty">Kontakty</Nav.Link></Nav.Item>
-          </Nav>
-        </Navbar.Collapse>
-        <Navbar.Brand as={Link} to="/">zdravy-domov.sk</Navbar.Brand>
-      </Container>
-    </Navbar>
-  </Styles>
-)
+export const NavBar = () => {
+  const [expanded, setExpanded] = useState(false);
+
+  return(
+    <Styles>
+      <Navbar expanded={expanded} expand="xl" fixed='top'>
+        <Container>
+          <ScrollUpButton />
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded((prevExpanded) => (prevExpanded = !prevExpanded))} />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto" onClick={() => setExpanded(false)}>
+              <Nav.Item><Nav.Link as={Link} to="/">Domov</Nav.Link></Nav.Item>
+              <Nav.Item><Nav.Link as={Link} to="/rekuperacie">Rekuperácie</Nav.Link></Nav.Item>
+              <Nav.Item><Nav.Link as={Link} to="/infravykurovanie">Infravykurovanie</Nav.Link></Nav.Item>
+              <Nav.Item><Nav.Link as={Link} to="/podlahove-vykurovanie">Podlahové vykurovanie</Nav.Link></Nav.Item>
+              <Nav.Item><Nav.Link as={Link} to="/infraziarice">Infražiariče</Nav.Link></Nav.Item>
+              <Nav.Item><Nav.Link as={Link} to="/kontakty">Kontakty</Nav.Link></Nav.Item>
+            </Nav>
+          </Navbar.Collapse>
+          <Navbar.Brand as={Link} to="/">zdravy-domov.sk</Navbar.Brand>
+        </Container>
+      </Navbar>
+    </Styles>
+  )
+}
