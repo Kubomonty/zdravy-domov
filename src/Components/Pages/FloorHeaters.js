@@ -130,7 +130,7 @@ export class FloorHeaters extends Component {
         <H2 id='poter'>Všetky typy podláh (do poteru)</H2>
         <H3>Prednosti</H3>
         <Maintext>+ ideálny vykurovací systém pre nízkoenergetické a pasívne domy</Maintext>
-        <Maintext>+ výkon od 40 do 240 W/m2</Maintext>
+        <Maintext>+ výkon od 40 do 240 W/m<sup>2</sup></Maintext>
         <Maintext>+ flexibilný harmonikový uchytávací systém uľahčuje pokládku</Maintext>
         <Maintext>+ jeden pripájací kábel</Maintext>
         <Maintext>+ takmer nemerateľné magnetické pole &lt; 25nT</Maintext>
@@ -145,11 +145,11 @@ export class FloorHeaters extends Component {
         <Maintext>Po dohode môže byť dĺžka pripájacieho kábla upravená podľa potreby zákazníka.</Maintext>
 
         <H3>Pomoc pri výbere / hlavné oblasti použitia</H3>
-        <H4><b>100-120W/m2</b></H4>
+        <H4><b>100-120W/m<sup>2</sup></b></H4>
         <Maintext>Do obývacích miestností s menšou potrebou energií (dobre izolované priestory) – ako priamotopné kúrenie</Maintext>
-        <H4><b>150-200W/m2</b></H4>
+        <H4><b>150-200W/m<sup>2</sup></b></H4>
         <Maintext>Do obývacích miestností – ako priamotopné, čiastočne akumulačné, alebo ako akumulačné kúrenie</Maintext>
-        <H4><b>240W/m2</b></H4>
+        <H4><b>240W/m<sup>2</sup></b></H4>
         <Maintext>Ako doplnkové kúrenie pri nedostatočnosti podlahového akumulačného kúrenia s položením v hornej vrstve poterového betónu</Maintext>
 
         <BlockBorder />
@@ -191,11 +191,11 @@ export class FloorHeaters extends Component {
         <Maintext>Každý elektrický vodič ktorým prechádza elektrický prúd vytvára magnetické pole. Podlahové kúrenia od ETHERMY sú dvojpólové vodiče ktorých magnetické polia sa navzájom rušia protismerným tokom elektrického prúdu. WHO odporúča neprekročiť hraničnú hodnotu  100µT (10-4 Tesla). Naše podlahové kúrenia majú hodnoty vytvoreného magnetického poľa od 5 do 25nT (10-9 Tesla). To je  4000 krát menej ako je povolená hraničná hodnota WHO-a je to takmer nemerateľné! Takto malé <b>magnetické pole zodpovedá definícii biologicky priaznivej „elektrosmog-free“ elektroinštalácii</b>.</Maintext>
         
         <H3>Pomoc pri výbere / hlavné oblasti použitia</H3>
-        <H4><b>130W/m2</b></H4>
+        <H4><b>130W/m<sup>2</sup></b></H4>
         <Maintext>Temperovanie podláh, alebo ako hlavné kúrenie do nízkoenergetických obytných domov</Maintext>
-        <H4><b>160W/m2</b></H4>
+        <H4><b>160W/m<sup>2</sup></b></H4>
         <Maintext>Plnohodnotné kúrenie do štandardne izolovaných budov, predovšetkým do kúpeľní, kuchýň, predsiení či zimných záhrad, ale aj do všetkých miestností obytných priestorov</Maintext>
-        <H4><b>200W/m2</b></H4>
+        <H4><b>200W/m<sup>2</sup></b></H4>
         <Maintext>Vykurovanie zle zateplených miestností, alebo tiež do miestností kde je požiadavka na rýchle vykúrenie, ako napríklad obslužné miestnosti pri saunách či wellness</Maintext>
 
         <H3>Inštalácia</H3>

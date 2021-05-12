@@ -40,10 +40,12 @@ const Maintext = styled.p`
   font-size: 1.5rem;
 `
 
-const Comment = styled.p`
+const Comment = styled.span`
   font-size: 0.8rem;
   color: #004d99;
+  margin: 0;
 `
+
 const StyledImage = styled(Image)`
   cursor: pointer;
 `
@@ -154,8 +156,8 @@ export class Recuperators extends Component {
           - Dátum a čas<br/>
           - Časovač vypnutia<br/>
           - Podpora Bluetooth<br/>
-          - Funkcia "Mini-vykurovanie"<br/>
-          - Zimná funkcia
+          - Funkcia "Mini-vykurovanie"<sup><Comment>&nbsp;1)</Comment></sup><br/>
+          - Zimná funkcia<sup><Comment>&nbsp;2)</Comment></sup>
         </Maintext>
         <H4>Premium</H4>
         <Maintext>
@@ -163,9 +165,9 @@ export class Recuperators extends Component {
           - Senzor vlhkosti vzduchu<br/>
           - Stanovenie stavu filtra<br/>
           - Snímač atmosférickeho tlaku<br/>
-          - Režim AUTO, AUTO PLUS<br/>
-          - Teplota odvádzaného vzduchu pred rekuperáciou, °C (senzor 1)<br/>
-          - Teplota odvádzaného vzduchu pred rekuperáciou, °C (senzor 2)
+          - Režim AUTO<sup><Comment>&nbsp;3)</Comment></sup>, AUTO PLUS<sup><Comment>&nbsp;4)</Comment></sup><br/>
+          - Teplota odvádzaného vzduchu pred rekuperáciou v °C (senzor 1)<br/>
+          - Teplota privádzaného vzduchu po rekuperácií v °C (senzor 2)
         </Maintext>
         <H4>Premium plus</H4>
         <Maintext>
@@ -173,17 +175,26 @@ export class Recuperators extends Component {
           - Čidlo oxidu uhličitého<br/>
           - Ukazovateľ úrovne účinnosti<br/>
           - Senzor kvality vzduchu, VOC<br/>
-          - Teplota odvádzaného vzduchu pred rekuperáciou, °C (senzor 3)<br/>
-          - Teplota odvádzaného vzduchu pred rekuperáciou, °C (senzor 4)
+          - TTeplota privádzaného vzduchu pred rekuperáciou v °C (senzor 3)<br/>
+          - Teplota odpadného vzduchu po rekuperácií v °C (senzor 4)
         </Maintext>
+
+        <StyledRow>
+          <Comment>
+            1) Funkcia "Mini-vykurovanie"  Umožňuje rozšíriť teplotný rozsah systému PRANA na -25 ° C (-30 ° C). Táto funkcia sa zapína a vypína pomocou diaľkového ovládača alebo zo smartphonu pomocou aplikácie pro Android a iOS. Pri práci v extrémnych teplotách zabraňuje námraze ventilátora výmenníku tepla a rekuperátora. V nočnom režime naviac zvyšuje teplotu privádzaného vzduchu o 3 až 4 ° C<br/>
+            2) Zimná funkcia je určená k zamedzeniu námrazy odtoku kondenzátu v chladnom období alebo k odmrazovaniu, ak dôjde k námraze. Aby sa zabránilo námraze a zaistila sa správna funkcia tepelného výmenníka pri vonkajšej teplote pod nulou, je použitie „Zimnej funkcie“ povinné<br/>
+            3) Režim „Auto“ zaisťuje efektívny chod výmenníku tepla a pohodlie v mastnostiach bez zásahu človeka vďaka senzorom teploty, vlhkosti vzduchu, hladiny CO2eq, VOC (indikátoru kvality vzduchu), atmosférického tlaku, indikátoru znečistenia filtra a ďalších<br/>
+            4) Režim „Auto Plus“ Rekuperátor pracuje na podobnom algoritme, ako pri režime "AUTO", ale s obmedzenými rýchlosťami ventilátorov. Maximálne prípustné otáčky motoru 3. Tento režim sa odporúča používať v noci
+          </Comment>
+        </StyledRow>
 
         <H3>Modely</H3>
         <H4>Prana 150</H4>
-        <Maintext>Rekuperačná jednotka pre jednu miestnosť do 60 m2</Maintext>
+        <Maintext>Rekuperačná jednotka pre jednu miestnosť do 60 m<sup>2</sup></Maintext>
         <Maintext>
           Účinnosť do 95%<br/>
           Priemer 160 mm, montážny otvor 162 mm<br/>
-          Prítok – 105 m3/h, odtok – 97 m3/h<br/>
+          Prítok – 105 m<sup>3</sup>/h, odtok – 97 m<sup>3</sup>/h, v režime NOC / minimum 12 m<sup>3</sup>/h<br/>
           Spotreba elektriny 4 – 68 W/h, mini-ohrev 55 W/h<br/>
           Hmotnosť 4,4 kg<br/>
           Napájanie 220V<br/>
@@ -201,25 +212,25 @@ export class Recuperators extends Component {
           Vstavaný mini-ohrev pre zvýšenie teploty privádzaného vzduchu<br/>
           Zimný režim pre pohodlne použitie pri teplotách
         </Maintext>
-        <Maintext>Minimálna dĺžka 455 mm</Maintext>
+        <Maintext>Minimálna dĺžka 450 mm</Maintext>
         <H4>Prana 200G</H4>
-        <Maintext>Rekuperačná jednotka pre jednu miestnosť do 60 m2</Maintext>
+        <Maintext>Rekuperačná jednotka pre jednu miestnosť do 60 m<sup>2</sup></Maintext>
         <Maintext>
-          Účinnosť do 93%<br/>
+          Účinnosť do 96%<br/>
           Priemer 210 mm, montážny otvor 212 mm<br/>
-          Prítok – 135 m3/h, odtok – 125 m3/h<br/>
-          Spotreba elektriny 7 – 32 W/h, mini-ohrev 55 W/h<br/>
+          Prítok – 108 m<sup>3</sup>/h, odtok – 100 m<sup>3</sup>/h, v režime NOC / minimum 12 m<sup>3</sup>/h<br/>
+          Spotreba elektriny 4 – 68 W/h, mini-ohrev 55 W/h<br/>
           Hmotnosť 5,8 kg<br/>
           Napájanie 220V
         </Maintext>
         <Maintext>Minimálna dĺžka 440 mm</Maintext>
         <H4>Prana 200C</H4>
-        <Maintext>Rekuperačná jednotka pre jednu miestnosť do 120 m2</Maintext>
+        <Maintext>Rekuperačná jednotka pre jednu miestnosť do 120 m<sup>2</sup></Maintext>
         <Maintext>
           Účinnosť do 93%<br/>
           Priemer 210 mm, montážny otvor 212 mm<br/>
-          Prítok – 235 m3/h, odtok – 220 m3/h<br/>
-          Spotreba elektriny 12 – 54 W/h, mini-ohrev 55 W/h<br/>
+          Prítok – 185 m<sup>3</sup>/h, odtok – 177 m<sup>3</sup>/h v režime NOC / minimum 21 m<sup>3</sup>/h<br/>
+          Spotreba elektriny 4– 91 W/h, mini-ohrev 55 W/h<br/>
           Hmotnosť 6,0 kg<br/>
           Napájanie 220V
         </Maintext>
@@ -258,8 +269,8 @@ export class Recuperators extends Component {
         <Row>
           <Col sm={6} xs={12}>
             <StyledRow>
-              <TabText>Prietokový objem v režime Eco/vyvetranie [m³/h]</TabText>
-              <Comment>&nbsp;1)</Comment>
+              <TabText>Prietokový objem v režime Eco/vyvetranie [m<sup>3</sup>/h]</TabText>
+              <Comment>&nbsp;5)</Comment>
             </StyledRow>
           </Col>
           <Col sm={6} xs={12}>
@@ -290,7 +301,7 @@ export class Recuperators extends Component {
           <Col sm={6} xs={12}>
             <StyledRow>
               <TabText>Príkon [W]</TabText>
-              <Comment>&nbsp;2)</Comment>
+              <Comment>&nbsp;6)</Comment>
             </StyledRow>
           </Col>
           <Col sm={6} xs={12}>
@@ -321,7 +332,7 @@ export class Recuperators extends Component {
           </Col>
         </Row>
         <StyledRow>
-          <Comment>1) v párovej prevádzke  2) bez sieťového zdroja</Comment>
+          <Comment>5) v párovej prevádzke  6) bez sieťového zdroja</Comment>
         </StyledRow>
       </div>
     )
