@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Image } from 'react-bootstrap';
+
+import brinkLogoImg from '../../../../../Assets/brink_logo.png';
 
 const H1 = styled.h1`
   color: #004d99;
@@ -54,6 +56,11 @@ const Maintext = styled.p`
   }
 `
 
+const StyledImage = styled(Image)`
+  width: 25vw;
+  margin-top: 1.5rem;
+`
+
 const TabRow = styled(Row)`
   padding-top: 1.2rem;
 `
@@ -86,7 +93,8 @@ export const RenoventE180 = () => (
       <title>{ TITLE }</title>
     </Helmet>
     <H1>Centrálne rekuperácie - nástenné</H1>
-    <Maintext>Máte radi čerstvý vzduch, no musíte nonstop vetrať?<br/>Máte kúrenia vyše hlavy?<br/>O pohodlie Vášho domova sa postaráme!</Maintext>
+    
+    <StyledImage src={brinkLogoImg}/>
 
     <H3>Renovent Excellent 180</H3>
     <Maintext>

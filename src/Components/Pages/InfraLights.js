@@ -102,6 +102,11 @@ const TabTitle = styled(TabText)`
   padding: 0;
   
   @media (min-width: 320px) {
+    font-size: 0.8rem;
+    transform: rotate(270deg) translatey(-25vw) translatex(-5vh);
+  }
+
+  @media (min-width: 460px) {
     font-size: 0.9rem;
     transform: rotate(270deg) translatey(-15vw) translatex(-5vh);
   }
