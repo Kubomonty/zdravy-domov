@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 import { scroller } from 'react-scroll'
 import { Col, Row, Image } from 'react-bootstrap';
@@ -10,32 +11,89 @@ import ethermaLogoImg from '../../Assets/etherma_logo.png';
 const H1 = styled.h1`
   margin-bottom: 3rem;
   color: #004d99;
-  font-size: 4rem;
+  margin-top: 2rem;
+
+  @media (min-width: 320px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 4rem;
+  }
 `
 
 const H2 = styled.h2`
   margin: 3.5rem 0 1rem 0;
   color: #004d99;
-  font-size: 3rem;
+  
+  @media (min-width: 320px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 3rem;
+  }
 `
 
 const H3 = styled.h3`
   margin: 3rem 0 1rem 0;
   color: #004d99;
-  font-size: 2rem;
+  
+  @media (min-width: 320px) {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.8rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 2rem;
+  }
 `
 
 const H4 = styled.h4`
   margin: 1rem 0 0 0;
-  font-size: 1.5rem;
+  
+  @media (min-width: 320px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+  }
 `
 
 const Maintext = styled.p`
-  font-size: 1.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+  @media (min-width: 320px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+  }
 `
 
 const StyledImage = styled(Image)`
-  width: 250px;
+  width: 25vw;
 `
 
 const BlockBorder = styled.section`
@@ -76,10 +134,15 @@ const HeatTypeButtonContent = styled.p`
   margin: 0 0.5rem;
 `;
 
+const TITLE = 'zdravy-domov | Podlahové vykurovanie'
+
 export class FloorHeaters extends Component {
   render() {
     return(
       <div>
+        <Helmet>
+          <title>{ TITLE }</title>
+        </Helmet>
         <H1 id='floor-top'>Podlahové vykurovanie</H1>
         <StyledImage src={ethermaLogoImg}/>
         <BlockBorder />

@@ -1,22 +1,57 @@
 import React from 'react'
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 import { Link } from 'react-router-dom';
 
 const H1 = styled.h1`
   color: #004d99;
-  font-size: 4rem;
+  margin-top: 2rem;
+
+  @media (min-width: 320px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 4rem;
+  }
 `
 
 const H2 = styled.h2`
   color: #004d99;
-  font-size: 2rem;
+  
+  @media (min-width: 320px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 3rem;
+  }
 `
 
 const H3 = styled.h3`
   margin-top: 1.25rem;
   color: #004d99;
-  font-size: 1.25rem;
+  
+  @media (min-width: 320px) {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.8rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 2rem;
+  }
 `
 
 const ContactGroup = styled.section`
@@ -24,18 +59,51 @@ const ContactGroup = styled.section`
 `
 
 const PrimaryMainText = styled.p `
-  font-size: 1.5rem;
   margin: 0;
+
+  @media (min-width: 320px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+  }
 `
 
 const Maintext = styled.p`
-  font-size: 1.1rem;
   margin: 0;
+
+  @media (min-width: 320px) {
+    font-size: 0.9rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.1rem;
+  }
 `
 
 const CompanyInfoText = styled.p `
-  font-size: 1.3rem;
   margin: 0;
+
+  @media (min-width: 320px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.3rem;
+  }
 `
 
 const StyledLink = styled(Link)`
@@ -50,9 +118,13 @@ color: inherit;
     text-decoration: none;
   }
 `
+const TITLE = 'zdravy-domov | Kontakty'
 
 export const Contacts = () => (
   <div>
+    <Helmet>
+      <title>{ TITLE }</title>
+    </Helmet>
     <H1>Kontakty</H1>
     <ContactGroup>
       <H2>Perháč Peter</H2>

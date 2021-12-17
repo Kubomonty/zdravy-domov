@@ -1,43 +1,112 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 import { scroller } from 'react-scroll'
 import { Col, Row, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-import pranaLogoImg from '../../Assets/prana_logo_ret.png';
-import smartfanLogoImg from '../../Assets/smartfan_logo.png';
-import smartfanS from '../../Assets/smartfan_s.jpg';
+import pranaLogoImg from '../../../../Assets/prana_logo_ret.png';
+import smartfanLogoImg from '../../../../Assets/smartfan_logo.png';
+import smartfanS from '../../../../Assets/smartfan_s.jpg';
 import Lightbox from 'react-image-lightbox';
 
 const H1 = styled.h1`
   color: #004d99;
-  font-size: 4rem;
+  margin-top: 2rem;
+
+  @media (min-width: 320px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 4rem;
+  }
 `
 
 const H2 = styled.h2`
   margin-bottom: 1rem;
   color: #004d99;
-  font-size: 3rem;
+
+  @media (min-width: 320px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 3rem;
+  }
 `
 
 const H3 = styled.h3`
   margin: 3rem 0 1rem 0;
   color: #004d99;
-  font-size: 2rem;
+  
+  @media (min-width: 320px) {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.8rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 2rem;
+  }
 `
 
 const H4 = styled.h4`
   margin: 1.2rem 0 0.8rem 0;
-  font-size: 1.5rem;
+  
+  @media (min-width: 320px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+  }
 `
 
 const TabText = styled.p`
-  font-size: 1.2rem;
+  @media (min-width: 320px) {
+    font-size: 0.8rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.2rem;
+  }
 `
 
 const Maintext = styled.p`
-  font-size: 1.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+
+  @media (min-width: 320px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+  }
 `
 
 const Comment = styled.span`
@@ -84,7 +153,9 @@ const RecuperatorCompanyLogo = styled.img`
   }
 `;
 
-export class Recuperators extends Component {
+const TITLE = 'zdravy-domov | Rekuperácie'
+
+export class DecentralizedRecuperators extends Component {
   onOpenRecImg = () => {
     this.props.onOpenRecImg()
   }
@@ -100,7 +171,10 @@ export class Recuperators extends Component {
   render() {
     return(
       <div>
-        <H1>Rekuperácie</H1>
+        <Helmet>
+          <title>{ TITLE }</title>
+        </Helmet>
+        <H1>Decentralizované Rekuperácie</H1>
         <Maintext>Máte radi čerstvý vzduch, no musíte nonstop vetrať?<br/>Máte kúrenia vyše hlavy?<br/>O pohodlie Vášho domova sa postaráme!</Maintext>
         <BlockBorder />
         <Row>
@@ -248,91 +322,96 @@ export class Recuperators extends Component {
         )}
         <H3>Technické údaje</H3>
         <Row>
-          <Col sm={6} xs={12}><Maintext>Miera tepelnej účinnosti</Maintext></Col>
-          <Col sm={6} xs={12}><Maintext>až 91%</Maintext></Col>
+          <Col xs={6}><Maintext>Miera tepelnej účinnosti</Maintext></Col>
+          <Col xs={6}><Maintext>až 91%</Maintext></Col>
         </Row>
         <Row>
-          <Col sm={6} xs={12}><Maintext>Enargetická trieda</Maintext></Col>
-          <Col sm={6} xs={12}><Maintext>A+</Maintext></Col>
+          <Col xs={6}><Maintext>Enargetická trieda</Maintext></Col>
+          <Col xs={6}><Maintext>A+</Maintext></Col>
         </Row>
+        <br/>
         <Row>
-          <Col sm={6} xs={12}></Col>
-          <Col sm={6} xs={12}>
+          <Col xs={4}></Col>
+          <Col xs={8}>
             <Row>
-              <Col sm={3}><p>Stupeň 1</p></Col>
-              <Col sm={3}><p>Stupeň 2</p></Col>
-              <Col sm={3}><p>Stupeň 3</p></Col>
-              <Col sm={3}><p>Stupeň 4</p></Col>
+              <Col xs={3}><TabText>Stupeň 1</TabText></Col>
+              <Col xs={3}><TabText>Stupeň 2</TabText></Col>
+              <Col xs={3}><TabText>Stupeň 3</TabText></Col>
+              <Col xs={3}><TabText>Stupeň 4</TabText></Col>
             </Row>
           </Col>
         </Row>
         <Row>
-          <Col sm={6} xs={12}>
+          <Col xs={4}>
             <StyledRow>
-              <TabText>Prietokový objem v režime Eco/vyvetranie [m<sup>3</sup>/h]</TabText>
-              <Comment>&nbsp;5)</Comment>
+              <TabText>Prietokový objem v režime Eco/vyvetranie [m<sup>3</sup>/h]<sup><Comment>&nbsp;5)</Comment></sup></TabText>
+              
             </StyledRow>
           </Col>
-          <Col sm={6} xs={12}>
+          <Col xs={8}>
             <Row>
-              <Col sm={3}><TabText>18</TabText></Col>
-              <Col sm={3}><TabText>28</TabText></Col>
-              <Col sm={3}><TabText>38</TabText></Col>
-              <Col sm={3}><TabText>46</TabText></Col>
+              <Col xs={3}><TabText>18</TabText></Col>
+              <Col xs={3}><TabText>28</TabText></Col>
+              <Col xs={3}><TabText>38</TabText></Col>
+              <Col xs={3}><TabText>46</TabText></Col>
             </Row>
           </Col>
         </Row>
         <Row>
-          <Col sm={6} xs={12}>
+          <Col xs={4}>
             <StyledRow>
               <TabText>Hladina akustického tlaku [dB(A)]</TabText>
             </StyledRow>
           </Col>
-          <Col sm={6} xs={12}>
+          <Col xs={8}>
             <Row>
-              <Col sm={3}><TabText>11</TabText></Col>
-              <Col sm={3}><TabText>19</TabText></Col>
-              <Col sm={3}><TabText>28</TabText></Col>
-              <Col sm={3}><TabText>33</TabText></Col>
+              <Col xs={3}><TabText>11</TabText></Col>
+              <Col xs={3}><TabText>19</TabText></Col>
+              <Col xs={3}><TabText>28</TabText></Col>
+              <Col xs={3}><TabText>33</TabText></Col>
             </Row>
           </Col>
         </Row>
         <Row>
-          <Col sm={6} xs={12}>
+          <Col xs={4}>
             <StyledRow>
-              <TabText>Príkon [W]</TabText>
-              <Comment>&nbsp;6)</Comment>
+              <TabText>Príkon [W]<sup><Comment>&nbsp;6)</Comment></sup></TabText>
+              
             </StyledRow>
           </Col>
-          <Col sm={6} xs={12}>
+          <Col xs={8}>
             <Row>
-              <Col sm={3}><TabText>0,8</TabText></Col>
-              <Col sm={3}><TabText>1,4</TabText></Col>
-              <Col sm={3}><TabText>2,6</TabText></Col>
-              <Col sm={3}><TabText>4,0</TabText></Col>
+              <Col xs={3}><TabText>0,8</TabText></Col>
+              <Col xs={3}><TabText>1,4</TabText></Col>
+              <Col xs={3}><TabText>2,6</TabText></Col>
+              <Col xs={3}><TabText>4,0</TabText></Col>
             </Row>
           </Col>
         </Row>
+        <br/>
         <Row>
-          <Col sm={6} xs={12}>
+          <Col xs={6}>
             <TabText>Normovaný rozdiel akustických tlakov Dn;w[dB]</TabText>
           </Col>
-          <Col sm={6} xs={12}>
+          <Col xs={6}>
             <TabText>44,99 (s voliteľnou zvukovoizolačnou súpravou)</TabText>
           </Col>
         </Row>
         <Row>
-          <Col sm={6} xs={12}>
+          <Col xs={6}>
             <StyledRow>
               <TabText>Priemer jadrového otvoru [mm]</TabText>
             </StyledRow>
           </Col>
-          <Col sm={6} xs={12}>
+          <Col xs={6}>
             <TabText>162</TabText>
           </Col>
         </Row>
         <StyledRow>
-          <Comment>5) v párovej prevádzke  6) bez sieťového zdroja</Comment>
+          <Comment>
+            5) v párovej prevádzke<br/>
+            6) bez sieťového zdroja
+          </Comment>
         </StyledRow>
       </div>
     )

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 import { Row, Col, Image } from 'react-bootstrap';
 
@@ -7,29 +8,78 @@ import nanoheatLogoImg from '../../Assets/nano_heat_logo.svg';
 
 const H1 = styled.h1`
   color: #004d99;
-  font-size: 4rem;
   margin-bottom: 2rem;
+  margin-top: 2rem;
+
+  @media (min-width: 320px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 4rem;
+  }
 `
 const H3 = styled.h3`
   margin: 3rem 0 1rem 0;
   color: #004d99;
-  font-size: 2rem;
+  
+  @media (min-width: 320px) {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.8rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 2rem;
+  }
 `
 
 const Maintext = styled.p`
-  font-size: 1.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+  @media (min-width: 320px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+  }
 `
 
 const TabText = styled.p`
-  font-size: 1.2rem;
+  @media (min-width: 320px) {
+    font-size: 0.8rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.2rem;
+  }
 `
 
 const StyledImage = styled(Image)`
-  width: 300px;
+  width: 25vw;
 `
+const TITLE = 'zdravy-domov | Infravykurovanie'
 
 export const InfraHeaters = () => (
   <div>
+    <Helmet>
+      <title>{ TITLE }</title>
+    </Helmet>
     <H1>Infravykurovanie</H1>
     <StyledImage src={nanoheatLogoImg}/>
     <H3>Prednosti</H3>
@@ -46,40 +96,40 @@ export const InfraHeaters = () => (
     <Maintext>V karbónových tyčiach je zmes karbónu a ďalších 7 prvkov. Vďaka tejto vykurovacej zmesi (japonský patent) má rohož NANO-HEAT samoregulačné vlastnosti. Vďaka týmto vlastnostiam a produkcii sálavého tepla dosiahnete v porovnaní s konvekčným kúrením úsporu nákladov 30 - 35 %. Nominálny výkon tejto NANO-HEAT rohože je 130 Watt na bežný meter. Postupným ohrievaním klesá výkon rohože až na cca 60 Watt. Vďaka efektu, pri ktorom výkon s pribúdajúcou teplotou prostredia klesá, neprichádza k zbytočnému prekúreniu. Táto skutočnosť vie priniesť ďalšiu úsporu 10 - 15 % oproti iným infra-technológiám. Na meniacu sa teplotu prostredia reaguje každá infratyč samostatne. Vďaka tomu sa minimalizuje pravdepodobnosť vzniku prehriatych miest z dôvodu zmeny umiestnenia nábytku!</Maintext>
     <H3>Technické údaje</H3>
     <Row>
-      <Col sm={6} xs={12}><TabText>Napätie</TabText></Col>
-      <Col sm={6} xs={12}><TabText>230V</TabText></Col>
+      <Col xs={6}><TabText>Napätie</TabText></Col>
+      <Col xs={6}><TabText>230V</TabText></Col>
     </Row>
     <Row>
-      <Col sm={6} xs={12}><TabText>Výkon</TabText></Col>
-      <Col sm={6} xs={12}><TabText>130 W/bm</TabText></Col>
+      <Col xs={6}><TabText>Výkon</TabText></Col>
+      <Col xs={6}><TabText>130 W/bm</TabText></Col>
     </Row>
     <Row>
-      <Col sm={6} xs={12}><TabText>Teplotná odolnosť</TabText></Col>
-      <Col sm={6} xs={12}><TabText>do 90 °C</TabText></Col>
+      <Col xs={6}><TabText>Teplotná odolnosť</TabText></Col>
+      <Col xs={6}><TabText>do 90 °C</TabText></Col>
     </Row>
     <Row>
-      <Col sm={6} xs={12}><TabText>Max. pracovná teplota</TabText></Col>
-      <Col sm={6} xs={12}><TabText>60 °C</TabText></Col>
+      <Col xs={6}><TabText>Max. pracovná teplota</TabText></Col>
+      <Col xs={6}><TabText>60 °C</TabText></Col>
     </Row>
     <Row>
-      <Col sm={6} xs={12}><TabText>Izolácia</TabText></Col>
-      <Col sm={6} xs={12}><TabText>Polypropylén</TabText></Col>
+      <Col xs={6}><TabText>Izolácia</TabText></Col>
+      <Col xs={6}><TabText>Polypropylén</TabText></Col>
     </Row>
     <Row>
-      <Col sm={6} xs={12}><TabText>Trieda ochrany</TabText></Col>
-      <Col sm={6} xs={12}><TabText>IP68</TabText></Col>
+      <Col xs={6}><TabText>Trieda ochrany</TabText></Col>
+      <Col xs={6}><TabText>IP68</TabText></Col>
     </Row>
     <Row>
-      <Col sm={6} xs={12}><TabText>Ochranné opratrenia</TabText></Col>
-      <Col sm={6} xs={12}><TabText>FI - istič 30 mA</TabText></Col>
+      <Col xs={6}><TabText>Ochranné opratrenia</TabText></Col>
+      <Col xs={6}><TabText>FI - istič 30 mA</TabText></Col>
     </Row>
     <Row>
-      <Col sm={6} xs={12}><TabText>Pripojenie</TabText></Col>
-      <Col sm={6} xs={12}><TabText>bez pripájacieho kábla</TabText></Col>
+      <Col xs={6}><TabText>Pripojenie</TabText></Col>
+      <Col xs={6}><TabText>bez pripájacieho kábla</TabText></Col>
     </Row>
     <Row>
-      <Col sm={6} xs={12}><TabText>Max. dĺžka rohože pri 16 A istení</TabText></Col>
-      <Col sm={6} xs={12}><TabText>23 bm</TabText></Col>
+      <Col xs={6}><TabText>Max. dĺžka rohože pri 16 A istení</TabText></Col>
+      <Col xs={6}><TabText>23 bm</TabText></Col>
     </Row>
   </div>
 )
